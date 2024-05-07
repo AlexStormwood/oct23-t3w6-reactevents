@@ -37,6 +37,17 @@ class App extends React.Component {
         <button onClick={this.decreaseNumber}>
           Decrease number
         </button>
+
+        {/* Create an array of size {numberOfPokemonToShow}, give each element in the array a value of null */}
+        {/* For each item in the array, render a HTML element (eg. a H1) */}
+        {
+          Array(this.state.numberOfPokemonToShow)
+          .fill(null)
+          .map((element, index) => { 
+            return <h1>{index}</h1>
+          })
+        }
+
       </div>
     );
   }
